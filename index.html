@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Entrega 3 </title>
+	<style>
+			body{
+		background-image: url(fondo.jfif);
+		background-size: cover;
+	}
+	.pre{
+		position: absolute;
+		font-family: suu;
+		font-size: 150%;
+		top: 5%;
+		left: 15%;
+		width: 60%;
+		height: 10%;
+		background: salmon;
+		border: black 5px solid;
+	}
+			@font-face{
+	font-family: suu;
+	src: url(su.ttf);
+}
+@font-face{
+	font-family: type;
+	src: url(tip.otf);
+}
+	.fon{
+		position: absolute;
+		top: 20%;
+		left: 5%;
+		width: 80%;
+		height: 75%;
+		background: white;
+		border: black 5px solid;
+	}
+	.num{
+		position: absolute;
+		top: 25%;
+		left: 10%;
+		width: 40%;
+		height: 30%;
+		color: black;
+		background: #AB01D8 ;
+		border: black 5px solid;
+	}
+	.num1{
+		position: absolute;
+		font-family: sunn;
+			font-size: 200%;
+			padding-left: border box ;
+		top: 30%;
+		left: 12%;
+		width: 10%;
+		height: 20%;
+		color: black;
+		background: lightpink;
+		border: black 5px solid;
+
+	}
+	@font-face{
+	font-family: sunn;
+	src: url(sun.ttf);
+}
+	.num2{
+		position: absolute;
+		font-family: sunn;
+		padding-left: border box ;
+		font-size: 200%;
+		top: 30%;
+		left: 38%;
+		width: 10%;
+		height: 20%;
+		color: black;
+		background: lightpink ;
+		border: black 5px solid;
+	}
+	.sig{
+		position: absolute;
+		font-family: sunn;
+		font-size: 200%;
+		top: 30%;
+		left: 25%;
+		width: 10%;
+		height: 20%;
+		color: black;
+		background: lightpink ;
+		border: black 5px solid;
+	}
+		.tim{
+		position: absolute;
+		top: 65%;
+		left: 25%;
+		width: 40%;
+		height: 25%;
+		background:  #AB01D8 ;
+		border: black 5px solid;
+	}
+	.sc{
+		position: absolute;
+		font-family: type;
+		font-size: 130%;
+		padding-left: border box ;
+		top: 67%;
+		left: 27%;
+		width: 15%;
+		height: 20%;
+		color: black;
+		background: lightpink ;
+		border: black 5px solid;
+	}
+	.tee{
+		position: absolute;
+		font-family: type;
+		font-size: 130%;
+		padding-left: border box ;
+		top: 67%;
+		left: 47%;
+		width: 15%;
+		height: 20%;
+		color: black;
+		background: lightpink ;
+		border: black 5px solid;
+	}
+		.ress{
+		position: absolute;
+		font-family: type;
+	    font-size: 200%;
+		top: 32%;
+		right: 30%;
+		width: 15%;
+		height: 10%;
+	    color: black;
+	
+	}
+
+		.ini{
+			position: absolute;
+			font-family: suu;
+			top: 35%;
+			right: 2%;
+			width: 10%;
+			height: 10%;
+			background: #95FF90;
+			border: black 5px solid;
+			border-radius: 100px;
+		}
+		.ig1{
+			position: absolute;
+			font-family: suu;
+			top: 50%;
+			right: 20%;
+			width: 0%;
+			height: 10%;
+			background: #95FF90;
+		}
+		.ig{
+			position: absolute;
+			font-family: suu;
+			top: 70%;
+			right: 20%;
+			width: 0%;
+			height: 10%;
+			background: #95FF90;
+		}
+
+</style>
+</head>
+<body>
+
+	<div class="pre"><center>Video Juego</center></div>
+	<div class="fon" id="foo"></div>
+	<div class="num"></div>
+	<div class="num1" id="nu1"></div>
+	<div class="num2" id="nu2"></div>
+	<div class="sig" id="sii"></div>
+	<div class="tim"></div>
+	<div class="sc" id="scr"> Puntos: </div>
+	<div class="tee" id="te"> Time: </div>
+	<div class="ini" id="in" onclick="cro()" ><center>Iniciar</center></div>
+	<div class="ig" id="inn" onclick="i()"></div>
+	<div class="ig1" id="inn1" onclick="im()"></div>
+
+
+	<from>
+	<input class="ress" type="text" id="res" placeholder="Respuesta">
+	</from>
+
+	<script type="text/javascript">
+		
+x=60;
+	a=0;
+	
+		function cro(){
+		acti();
+		x=x-1;
+			te.innerHTML="Time: "+x;
+			if(x==0){
+				clearInterval(cronoo);
+				te.innerHTML="Se te acabo el tiempo";
+				inn1.style.width=0+"%";
+				inn1.innerHTML=" ";
+				inn.style.width=0+"%";
+				inn.innerHTML=" ";
+
+			}
+		}
+	function acti(){
+			if(a==0){
+				cronoo=setInterval(cro,1000);
+				a=1;
+			}
+			 inn.style.width= 10+"%";
+			inn.innerHTML="ingresar";
+			inn1.style.width= 10+"%";
+			inn1.innerHTML="Numeros";
+
+		
+		}
+		function im(){
+			 n1= Math. floor((Math.random()  * (11-1)) +1);
+			 n2= Math. floor((Math.random()  * (11-1)) +1);
+			 s= Math. floor((Math.random()  * (3-1)) +1);
+
+			nu1.innerHTML= n1;
+			nu2.innerHTML=n2;
+			if(s==1){
+				sii.innerHTML="+";	
+				r=n1+n2;
+			}
+			if(s==2){
+				sii.innerHTML="-";
+				r=n1-n2;
+			}
+
+		}
+kk=0;
+		function i(){
+			scr.innerHTML=kk;
+			gg=Number(res.value);
+			if(gg==r){
+				kk=kk+10;
+				scr.innerHTML="Puntos: "+kk;
+			}
+			else{
+				
+				kk=kk-10;
+				scr.innerHTML="Puntos: "+kk;
+			}
+		}
+		
+		
+	
+			
+		
+	</script>
+
+</body>
+</html>
